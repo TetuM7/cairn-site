@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Cairn: the map of your product</title>
+	<meta name="description" content="Cairn records, sets up and checks the services an app depends on, and shows them all on one map.">
+	<link rel="icon" href="/assets/logo.png">
+	<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+	<header>
+		<a class="brand" href="/"><img src="/assets/logo.png" alt="">Cairn</a>
+		<nav><a href="/docs/vercel.html">Docs</a><a href="/support.html">Support</a></nav>
+	</header>
+	<main>
+		<span class="status">Pre-release: in development</span>
+		<h1>The map of your product</h1>
+		<p class="lead">Everything your app depends on, what each piece does, why it's there, and where to find it.</p>
+
+		<p>Coding agents build apps fast. The services underneath them still pile up: a database here, a login provider there, an email service, hosting, analytics. Each one comes with its own account and its own keys. Two months in, it's hard to say what the app runs on, which login each service is under, or why it's there.</p>
+		<p>Cairn keeps that record for you, and checks that each piece works.</p>
+
+		<h2>What Cairn does</h2>
+		<div class="grid">
+			<div class="card"><h3>Maps it</h3><p>Every service, account, domain and key location, on one map, with a direct link to each.</p></div>
+			<div class="card"><h3>Sets it up with you</h3><p>You create accounts and pay. Cairn guides you through it, records it, and your agent configures the rest.</p></div>
+			<div class="card"><h3>Checks it</h3><p>Real checks: the database reads and writes, a test login succeeds, and email sends. Untested is never shown as passed.</p></div>
+		</div>
+
+		<h2>What Cairn never does</h2>
+		<ul>
+			<li><strong>It never holds your secrets.</strong> API keys and passwords are resolved on your own machine and never reach Cairn's servers.</li>
+			<li><strong>It never changes your subscriptions or billing.</strong> When something should change, it tells you, with a direct link.</li>
+			<li><strong>It never signs up or pays for you.</strong> Those steps are always yours.</li>
+		</ul>
+
+		<h2>Status</h2>
+		<p>Cairn is in development and isn't open to the public yet. Its integrations are currently installed only by its developers' own test accounts. "Cairn" is a working name.</p>
+	</main>
+	<footer>
+		<a href="/docs/vercel.html">Docs</a><a href="/support.html">Support</a><a href="/terms.html">Terms</a><a href="/privacy.html">Privacy</a>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Cairn for Vercel: documentation</title>
+	<meta name="description" content="What Cairn's Vercel integration reads, what it never does, and how to remove it.">
+	<link rel="icon" href="/assets/logo.png">
+	<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+	<header>
+		<a class="brand" href="/"><img src="/assets/logo.png" alt="">Cairn</a>
+		<nav><a href="/docs/vercel.html">Docs</a><a href="/support.html">Support</a></nav>
+	</header>
+	<main>
+		<span class="status">Pre-release: in development</span>
+		<h1>Cairn for Vercel</h1>
+		<p class="lead">Connecting Vercel lets Cairn show where your app runs, its deployments and its domains on your project's map, and check them.</p>
+
+		<h2>Installing it</h2>
+		<ol>
+			<li>Start from Cairn: run <code>cairn up</code>, or choose Connect on the map. Cairn opens Vercel's install page in your browser.</li>
+			<li>Choose the Vercel account or team, and the projects Cairn may see.</li>
+			<li>Vercel returns you to Cairn, and the connection shows as Connected. It shows as Working only after a check passes.</li>
+		</ol>
+
+		<h2>What it can read</h2>
+		<p>Every permission is read-only.</p>
+		<table>
+			<thead><tr><th>Vercel permission</th><th>Access</th><th>Why Cairn needs it</th></tr></thead>
+			<tbody>
+				<tr><td>Projects</td><td>Read</td><td>Show which project the app runs on, and its settings</td></tr>
+				<tr><td>Deployments</td><td>Read</td><td>Show deploy status and previews, and what triggers a deploy</td></tr>
+				<tr><td>Domains</td><td>Read</td><td>Show where each domain points</td></tr>
+				<tr><td>Team</td><td>Read</td><td>Show which team a project belongs to</td></tr>
+				<tr><td>User</td><td>Read</td><td>Show which login the account is under</td></tr>
+				<tr><td>Integration configuration</td><td>Read</td><td>See which projects you've shared with Cairn</td></tr>
+			</tbody>
+		</table>
+
+		<h2>What it never does</h2>
+		<ul>
+			<li><strong>It never reads your environment variables' values.</strong> Cairn asks for no environment-variable permission. Your keys stay on your machine, and Cairn records only where each one lives.</li>
+			<li><strong>It never touches billing.</strong> It asks for no billing permission, and never changes a plan or subscription.</li>
+			<li><strong>It never buys or transfers domains, deploys, or deletes anything.</strong> It has no write access.</li>
+		</ul>
+
+		<h2 id="removing-it">Removing it</h2>
+		<p>In Vercel, open your account or team's <strong>Integrations</strong> page, choose Cairn, and remove it. Vercel revokes Cairn's access at once, so the token Cairn held stops working, and the map shows the connection as disconnected.</p>
+
+		<h2>Questions</h2>
+		<p>See <a href="/support.html">Support</a>.</p>
+	</main>
+	<footer>
+		<a href="/docs/vercel.html">Docs</a><a href="/support.html">Support</a><a href="/terms.html">Terms</a><a href="/privacy.html">Privacy</a>
+	</footer>
+</body>
+</html>
